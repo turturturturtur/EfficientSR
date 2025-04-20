@@ -1,0 +1,74 @@
+# general settings
+name: FSRCNN_x2
+model_type: IRModel
+scale: 2
+num_gpu: 1
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  test_1:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Set5/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Set5/x2
+    io_backend:
+      type: disk
+
+  test_2:
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Set14/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Set14/x2
+    io_backend:
+      type: disk
+
+  test_3:
+    name: BSD100
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/B100/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/B100/x2
+    io_backend:
+      type: disk
+
+  test_4:
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Urban100/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Urban100/x2
+    io_backend:
+      type: disk
+
+  test_5:
+    name: Manga109
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Manga109/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Manga109/x2
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: FSRCNN
+  upscale: 2
+
+# resume
+resume:
+  network_g_path: experiments/pretrained_models/FSRCNN/FSRCNN_x2.pth
+  network_g_strict: true
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~
+  pbar: True
+
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 2
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 2
+      test_y_channel: true

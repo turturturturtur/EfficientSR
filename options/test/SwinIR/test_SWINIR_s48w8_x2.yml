@@ -1,0 +1,81 @@
+name: SwinIR_s48w8_SRx2_Infrared
+model_type: SwinIRModel
+scale: 2
+num_gpu: 2  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+datasets:
+  test_1:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Set5/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Set5/x2
+    io_backend:
+      type: disk
+
+  test_2:
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Set14/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Set14/x2
+    io_backend:
+      type: disk
+
+  test_3:
+    name: BSD100
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/B100/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/B100/x2
+    io_backend:
+      type: disk
+
+  test_4:
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Urban100/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Urban100/x2
+    io_backend:
+      type: disk
+
+  test_5:
+    name: Manga109
+    type: PairedImageDataset
+    dataroot_gt: datasets/TestDataSR/HR/Manga109/x2
+    dataroot_lq: datasets/TestDataSR/LR/LRBI/Manga109/x2
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: SwinIR
+  num_in_ch: 3
+  upsampler: 'pixelshuffle'
+  embed_dim: 180
+  mlp_ratio: 2
+  window_size: 8
+  img_size: 48
+  window_size: 8
+  img_range: 1.
+  depths: [6, 6, 6, 6, 6, 6]
+  num_heads: [6, 6, 6, 6, 6, 6]
+  param_key_g: params
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/SwinIR/001_classicalSR_DIV2K_s48w8_SwinIR-M_x2.pth
+  strict_load_g: true
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true

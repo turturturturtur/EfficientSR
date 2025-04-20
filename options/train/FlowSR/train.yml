@@ -1,0 +1,104 @@
+# General settings
+name: 001_LINF_x4_scratch_DIV2K
+model_type: SRModel
+scale: 4  # 适用于超分任务的缩放因子
+num_gpu: 1  # 设置为 0 以在 CPU 上运行
+manual_seed: 42
+
+# Dataset and data loader settings
+datasets:
+  train:
+    name: DIV2K
+    type: PairedImageDataset
+    dataroot_gt: datasets/DIV2K/DIV2K_train_HR
+    dataroot_lq: datasets/DIV2K/DIV2K_train_LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+    gt_size: 128
+    use_hflip: true
+    use_rot: true
+
+    # Data loader settings
+    num_worker_per_gpu: 6
+    batch_size_per_gpu: 16
+    dataset_enlarge_ratio: 100
+    prefetch_mode: ~
+
+  val:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: datasets/Set5/GTmod12
+    dataroot_lq: datasets/Set5/LRbicx4
+    io_backend:
+      type: disk
+
+# Network structures
+network_g:
+  type: LinfSRNet
+  encoder:
+    type: EDSR
+    n_resblocks: 16
+    n_feats: 64
+    no_upsampling: true
+  flow:
+    type: Flow
+    flow_layers: 10
+  unet:
+    type: UNet
+    in_chans: 64
+    out_chans: 3
+
+# Path settings
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# Training settings
+train:
+  ema_decay: 0.999
+  optim_g:
+    type: Adam
+    lr: !!float 1e-4
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [200000, 400000, 600000]
+    gamma: 0.5
+
+  total_iter: 500000
+  warmup_iter: -1  # no warm-up
+
+  # Loss functions
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+# Validation settings
+val:
+  val_freq: !!float 5e3
+  save_img: false
+
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
+
+# Logging settings
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# Distributed training settings
+dist_params:
+  backend: nccl
+  port: 29500

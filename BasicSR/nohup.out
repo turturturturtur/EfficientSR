@@ -1,0 +1,347 @@
+/data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages/setuptools/__init__.py:94: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+!!
+
+        ********************************************************************************
+        Requirements should be satisfied by a PEP 517 installer.
+        If you are using pip, you can try `pip install --use-pep517`.
+        ********************************************************************************
+
+!!
+  dist.fetch_build_eggs(dist.setup_requires)
+running develop
+/data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+/data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running egg_info
+writing basicsr.egg-info/PKG-INFO
+writing dependency_links to basicsr.egg-info/dependency_links.txt
+writing requirements to basicsr.egg-info/requires.txt
+writing top-level names to basicsr.egg-info/top_level.txt
+reading manifest file 'basicsr.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE.txt'
+writing manifest file 'basicsr.egg-info/SOURCES.txt'
+running build_ext
+Creating /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages/basicsr.egg-link (link to .)
+Adding basicsr 1.4.2 to easy-install.pth file
+
+Installed /data_c/tianle/BasicSR
+Processing dependencies for basicsr==1.4.2
+Searching for yapf==0.43.0
+Best match: yapf 0.43.0
+Adding yapf 0.43.0 to easy-install.pth file
+Installing yapf script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing yapf-diff script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for tqdm==4.67.1
+Best match: tqdm 4.67.1
+Adding tqdm 4.67.1 to easy-install.pth file
+Installing tqdm script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for torchvision==0.20.1
+Best match: torchvision 0.20.1
+Adding torchvision 0.20.1 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for torch==2.5.1
+Best match: torch 2.5.1
+Adding torch 2.5.1 to easy-install.pth file
+Installing convert-caffe2-to-onnx script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing convert-onnx-to-caffe2 script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing torchfrtrace script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing torchrun script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for tb-nightly==2.19.0a20250116
+Best match: tb-nightly 2.19.0a20250116
+Adding tb-nightly 2.19.0a20250116 to easy-install.pth file
+Installing tensorboard script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for scipy==1.15.1
+Best match: scipy 1.15.1
+Adding scipy 1.15.1 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for scikit-image==0.25.0
+Best match: scikit-image 0.25.0
+Adding scikit-image 0.25.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for requests==2.32.3
+Best match: requests 2.32.3
+Adding requests 2.32.3 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for PyYAML==6.0.2
+Best match: PyYAML 6.0.2
+Adding PyYAML 6.0.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for pillow==11.1.0
+Best match: pillow 11.1.0
+Adding pillow 11.1.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for opencv-python==4.11.0.86
+Best match: opencv-python 4.11.0.86
+Adding opencv-python 4.11.0.86 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for numpy==2.2.1
+Best match: numpy 2.2.1
+Adding numpy 2.2.1 to easy-install.pth file
+Installing f2py script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing numpy-config script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for lmdb==1.6.2
+Best match: lmdb 1.6.2
+Adding lmdb 1.6.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for future==1.0.0
+Best match: future 1.0.0
+Adding future 1.0.0 to easy-install.pth file
+Installing futurize script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing pasteurize script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for addict==2.4.0
+Best match: addict 2.4.0
+Adding addict 2.4.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for tomli==2.2.1
+Best match: tomli 2.2.1
+Adding tomli 2.2.1 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for platformdirs==4.3.6
+Best match: platformdirs 4.3.6
+Adding platformdirs 4.3.6 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for sympy==1.13.1
+Best match: sympy 1.13.1
+Adding sympy 1.13.1 to easy-install.pth file
+Installing isympy script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for triton==3.1.0
+Best match: triton 3.1.0
+Adding triton 3.1.0 to easy-install.pth file
+Installing proton script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing proton-viewer script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-nvjitlink-cu12==12.4.127
+Best match: nvidia-nvjitlink-cu12 12.4.127
+Adding nvidia-nvjitlink-cu12 12.4.127 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-nvtx-cu12==12.4.127
+Best match: nvidia-nvtx-cu12 12.4.127
+Adding nvidia-nvtx-cu12 12.4.127 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-nccl-cu12==2.21.5
+Best match: nvidia-nccl-cu12 2.21.5
+Adding nvidia-nccl-cu12 2.21.5 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cusparse-cu12==12.3.1.170
+Best match: nvidia-cusparse-cu12 12.3.1.170
+Adding nvidia-cusparse-cu12 12.3.1.170 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cusolver-cu12==11.6.1.9
+Best match: nvidia-cusolver-cu12 11.6.1.9
+Adding nvidia-cusolver-cu12 11.6.1.9 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-curand-cu12==10.3.5.147
+Best match: nvidia-curand-cu12 10.3.5.147
+Adding nvidia-curand-cu12 10.3.5.147 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cufft-cu12==11.2.1.3
+Best match: nvidia-cufft-cu12 11.2.1.3
+Adding nvidia-cufft-cu12 11.2.1.3 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cublas-cu12==12.4.5.8
+Best match: nvidia-cublas-cu12 12.4.5.8
+Adding nvidia-cublas-cu12 12.4.5.8 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cudnn-cu12==9.1.0.70
+Best match: nvidia-cudnn-cu12 9.1.0.70
+Adding nvidia-cudnn-cu12 9.1.0.70 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cuda-cupti-cu12==12.4.127
+Best match: nvidia-cuda-cupti-cu12 12.4.127
+Adding nvidia-cuda-cupti-cu12 12.4.127 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cuda-runtime-cu12==12.4.127
+Best match: nvidia-cuda-runtime-cu12 12.4.127
+Adding nvidia-cuda-runtime-cu12 12.4.127 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for nvidia-cuda-nvrtc-cu12==12.4.127
+Best match: nvidia-cuda-nvrtc-cu12 12.4.127
+Adding nvidia-cuda-nvrtc-cu12 12.4.127 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for fsspec==2024.12.0
+Best match: fsspec 2024.12.0
+Adding fsspec 2024.12.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for jinja2==3.1.5
+Best match: jinja2 3.1.5
+Adding jinja2 3.1.5 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for networkx==3.4.2
+Best match: networkx 3.4.2
+Adding networkx 3.4.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for typing-extensions==4.12.2
+Best match: typing-extensions 4.12.2
+Adding typing-extensions 4.12.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages/setuptools/_vendor
+Searching for filelock==3.16.1
+Best match: filelock 3.16.1
+Adding filelock 3.16.1 to easy-install.pth file
+detected new path './setuptools/_vendor'
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for werkzeug==3.1.3
+Best match: werkzeug 3.1.3
+Adding werkzeug 3.1.3 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for tensorboard-data-server==0.7.2
+Best match: tensorboard-data-server 0.7.2
+Adding tensorboard-data-server 0.7.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for six==1.17.0
+Best match: six 1.17.0
+Adding six 1.17.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for setuptools==75.1.0
+Best match: setuptools 75.1.0
+Adding setuptools 75.1.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for protobuf==5.29.3
+Best match: protobuf 5.29.3
+Adding protobuf 5.29.3 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for packaging==24.2
+Best match: packaging 24.2
+Adding packaging 24.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for Markdown==3.7
+Best match: Markdown 3.7
+Adding Markdown 3.7 to easy-install.pth file
+Installing markdown_py script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for grpcio==1.69.0
+Best match: grpcio 1.69.0
+Adding grpcio 1.69.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for absl-py==2.1.0
+Best match: absl-py 2.1.0
+Adding absl-py 2.1.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for lazy-loader==0.4
+Best match: lazy-loader 0.4
+Adding lazy-loader 0.4 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for tifffile==2025.1.10
+Best match: tifffile 2025.1.10
+Adding tifffile 2025.1.10 to easy-install.pth file
+Installing lsm2bin script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing tiff2fsspec script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing tiffcomment script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing tifffile script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for imageio==2.36.1
+Best match: imageio 2.36.1
+Adding imageio 2.36.1 to easy-install.pth file
+Installing imageio_download_bin script to /data_c/tianle/miniconda3/envs/basicSR/bin
+Installing imageio_remove_bin script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for certifi==2024.12.14
+Best match: certifi 2024.12.14
+Adding certifi 2024.12.14 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for urllib3==2.3.0
+Best match: urllib3 2.3.0
+Adding urllib3 2.3.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for idna==3.10
+Best match: idna 3.10
+Adding idna 3.10 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for charset-normalizer==3.4.1
+Best match: charset-normalizer 3.4.1
+Adding charset-normalizer 3.4.1 to easy-install.pth file
+Installing normalizer script to /data_c/tianle/miniconda3/envs/basicSR/bin
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for mpmath==1.3.0
+Best match: mpmath 1.3.0
+Adding mpmath 1.3.0 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Searching for MarkupSafe==3.0.2
+Best match: MarkupSafe 3.0.2
+Adding MarkupSafe 3.0.2 to easy-install.pth file
+
+Using /data_c/tianle/miniconda3/envs/basicSR/lib/python3.10/site-packages
+Finished processing dependencies for basicsr==1.4.2
